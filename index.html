@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Management System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f6f9; color: #333; }
+        h1 { color: #2c3e50; }
+        .dashboard { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 250px; }
+        .status-ok { color: #27ae60; font-weight: bold; }
+        .status-warning { color: #e67e22; font-weight: bold; }
+        .status-full { color: #c0392b; font-weight: bold; }
+        .progress-bar { background: #eee; height: 15px; border-radius: 10px; overflow: hidden; margin-top: 10px; }
+        .fill { height: 100%; width: 0%; transition: width 0.5s; }
+    </style>
+</head>
+<body>
+    <h1>♻️ Smart Waste Management Dashboard</h1>
+    <p>Live Monitoring & Route Optimization Simulator</p>
+    
+    <div class="dashboard">
+        <div class="card">
+            <h3>Bin #1 (Main Gate)</h3>
+            <p>Status: <span id="status1" class="status-ok">Normal</span></p>
+            <p>Fill Level: <span id="level1">30%</span></p>
+            <div class="progress-bar"><div id="bar1" class="fill" style="width: 30%; background: #27ae60;"></div></div>
+        </div>
+        <div class="card">
+            <h3>Bin #2 (Cafeteria)</h3>
+            <p>Status: <span id="status2" class="status-warning">Attention</span></p>
+            <p>Fill Level: <span id="level2">75%</span></p>
+            <div class="progress-bar"><div id="bar2" class="fill" style="width: 75%; background: #e67e22;"></div></div>
+        </div>
+        <div class="card">
+            <h3>Bin #3 (Library)</h3>
+            <p>Status: <span id="status3" class="status-full">Pickup Required</span></p>
+            <p>Fill Level: <span id="level3">90%</span></p>
+            <div class="progress-bar"><div id="bar3" class="fill" style="width: 90%; background: #c0392b;"></div></div>
+        </div>
+    </div>
+</body>
+</html>
